@@ -1,0 +1,168 @@
+// products.mongodb
+
+use("pet_store")
+
+db.products.drop() // elimina los documentos creados en la colleccion anteriormente
+
+db.products.insertMany([
+  {
+    _id: 1,
+    title: "Product 1",
+    price: 100,
+    description: "Collar de nylon resistente con hebilla ajustable para perros de todos los tamaños.",
+    category: "Accesorios para perros",
+    image: "https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.amazon.com%2F-%2Fes%2FCollar-perro-cuero-enrollado-entrenamiento%2Fdp%2FB09Q6HD4QN&psig=AOvVaw1iBkp5Eo4-XMCRmTsTzXLj&ust=1700783082057000&source=images&cd=vfe&opi=89978449&ved=0CBEQjRxqFwoTCNiYh_Dk2IIDFQAAAAAdAAAAABAE"
+  },
+  {
+    _id: 2,
+    title: "Product 2",
+    price: 20,
+    description: "Pelota con luces LED y movimiento irregular para entretener a tu gato durante horas.",
+    category: "Juguetes para gatos",
+    image: "https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.joom.com%2Fes%2Fproducts%2F1512790912660120558-54-1-26193-2832531298&psig=AOvVaw2B0GinHHbYRHpQaWLlnHY3&ust=1700783188182000&source=images&cd=vfe&opi=89978449&ved=0CBEQjRxqFwoTCNDAqqHl2IIDFQAAAAAdAAAAABAO"
+  },
+  {
+    _id: 3,
+    title: "Product 3",
+    price: 29.99,
+    description: "Cama suave y acolchada con soporte ortopédico para perros y gatos mayores o con problemas articulares.",
+    category: "Camas y muebles para mascotas",
+    image: "https://www.google.com/url?sa=i&url=https%3A%2F%2Fanimalscenter.com%2Fdermatologicos%2F154-saniderm-crema-x-40-g.html&psig=AOvVaw136XlABH5-BQl64BiIFBVZ&ust=1700783328461000&source=images&cd=vfe&opi=89978449&ved=0CBEQjRxqFwoTCOj6yOPl2IIDFQAAAAAdAAAAABAE"
+  },
+  {
+    _id: 4,
+    title: "Product 4",
+    price: 39.95,
+    description: "Dispensador programable de comida con control de porciones para mantener a tu mascota alimentada cuando estás fuera.",
+    category: "Alimentación y bebederos",
+    image: "https://www.google.com/url?sa=i&url=https%3A%2F%2Fhappypetsco.com%2Ftienda%2Fdispensador-de-concentrado-mini%2F&psig=AOvVaw2gCXJIu7WvIZ4svqdA7res&ust=1700783365268000&source=images&cd=vfe&opi=89978449&ved=0CBEQjRxqFwoTCODU6PTl2IIDFQAAAAAdAAAAABAE"
+  },
+  {
+    _id: 5,
+    title: "Product 5",
+    price: 7.99,
+    description: "Cepillo de dientes de silicona diseñado para limpiar los dientes y masajear las encías de tu perro.",
+    category: "Higiene dental para mascotas",
+    image: "https://www.google.com/url?sa=i&url=https%3A%2F%2Fgioatope.com%2Fproducto%2Fcepillo-de-madera-pequeno-para-perros&psig=AOvVaw3d-6UlvlJmBOUnqNgq0o37&ust=1700783408817000&source=images&cd=vfe&opi=89978449&ved=0CBEQjRxqFwoTCNDh3onm2IIDFQAAAAAdAAAAABAY"
+  },
+  {
+    _id: 6,
+    title: "Product 6",
+    price: 34.50,
+    description: "Bolsa de transporte con ventilación y correa ajustable para llevar a tu gato de manera cómoda y segura.",
+    category: "Viajes y transporte para mascotas",
+    image: "https://www.google.com/url?sa=i&url=https%3A%2F%2Fkatoa.com.co%2Fproducto%2Fmorral-para-perros-medianos-pequenos%2F&psig=AOvVaw2rnO_166DuvUX53w_82h1t&ust=1700783479534000&source=images&cd=vfe&opi=89978449&ved=0CBEQjRxqFwoTCJDkjKvm2IIDFQAAAAAdAAAAABAH"
+  },
+  {
+    _id: 7,
+    title: "Product 7",
+    price: 12.75,
+    description: "Arnés ajustable con material reflectante para mayor visibilidad y seguridad durante paseos nocturnos.",
+    category: "Accesorios para perros",
+    image: "https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.amazon.com%2F-%2Fes%2Faccesorios-ajustable-mascotas-material-reflectante%2Fdp%2FB09WVWLNXN&psig=AOvVaw1DQ8c1b75rF8u6MIcCT6so&ust=1700783703949000&source=images&cd=vfe&opi=89978449&ved=0CBEQjRxqFwoTCLCkuJbn2IIDFQAAAAAdAAAAABAF"
+  },
+  {
+    _id: 8,
+    title: "Product 8",
+    price: 5.99,
+    description: "Premios pequeños y saludables ideales para el entrenamiento de perros y gatos.",
+    category: "Snacks y premios",
+    image: "https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.melopienso.com%2Fblog%2Fperros%2Fcomida%2Fpremios%2F&psig=AOvVaw3wCqpyWPkyU2dNupyG0kWW&ust=1700783724377000&source=images&cd=vfe&opi=89978449&ved=0CBEQjRxqFwoTCKDNnKDn2IIDFQAAAAAdAAAAABAE"
+  },
+  {
+    _id: 9,
+    title: "Product 9",
+    price: 18.95,
+    description: "Poste rascador envuelto en sisal natural para satisfacer los instintos de rascado de tu gato.",
+    category: "Muebles para gatos",
+    image: "https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.amazon.es%2FPawHut-Rascador-Actividad-Plataformas-45x33x70cm%2Fdp%2FB07K1RJGJM&psig=AOvVaw13kfJKZ8Rd-N0xJnXLUQsE&ust=1700783780423000&source=images&cd=vfe&opi=89978449&ved=0CBEQjRxqFwoTCMCG7brn2IIDFQAAAAAdAAAAABAE"
+  },
+  {
+    _id: 10,
+    title: "Product 10",
+    price: 6.50,
+    description: "Pelota de goma que flota en el agua para divertidos juegos de piscina para perros.",
+    category: "Juguetes acuáticos para perros",
+    image: "https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.amazon.com%2F-%2Fes%2Fchirriante-flotantes-duraderas-interactiva-cachorros%2Fdp%2FB099Z75XC6&psig=AOvVaw230Y-eEJ1t2KmV64xBEyiy&ust=1700783858370000&source=images&cd=vfe&opi=89978449&ved=0CBEQjRxqFwoTCLCM39_n2IIDFQAAAAAdAAAAABAFuatica"
+  },
+  {
+    _id: 11,
+    title: "Product 11",
+    price: 22.99,
+    description: "Chaqueta con forro suave y capa impermeable para proteger a tu perro de la lluvia y el frío.",
+    category: "Ropa para perros",
+    image: "https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.amazon.com%2F-%2Fes%2FDENTRUN-invierno-resistente-chaqueta-reflectante%2Fdp%2FB075SRWCGV&psig=AOvVaw0QNHJNPcjmqsN4Q-30qifd&ust=1700783969739000&source=images&cd=vfe&opi=89978449&ved=0CBEQjRxqFwoTCMiUi5Xo2IIDFQAAAAAdAAAAABAE"
+  },
+  {
+    _id: 12,
+    title: "Product 12",
+    price: 8.25,
+    description: "Porta bolsas con dispensador para recolección de desechos de manera ecológica durante paseos con tu perro.",
+    category: "Accesorios para paseos",
+    image: "https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.freepik.es%2Ffotos-premium%2Fdispensador-bolsas-perros-calle-paquete-toma-manual-limpieza-despues-caca-mascotas_45052020.htm&psig=AOvVaw0RDSVlKgUyiNs7IJptFS5a&ust=1700783990888000&source=images&cd=vfe&opi=89978449&ved=0CBEQjRxqFwoTCLiwnZ_o2IIDFQAAAAAdAAAAABAI"
+  },
+  {
+    _id: 13,
+    title: "Product 13",
+    price: 4.99,
+    description: "Juguete de goma resistente con sonido crujiente ideal para cachorros en etapa de dentición.",
+    category: "Juguetes para cachorros",
+    image: "https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.losreblujosdepati.com%2Fjuguete-mascota-mordedor-de-caucho%2F&psig=AOvVaw3VctZwy6ZpOcmb2TeTQiDn&ust=1700784017193000&source=images&cd=vfe&opi=89978449&ved=0CBEQjRxqFwoTCODo0avo2IIDFQAAAAAdAAAAABAJ"
+  },
+  {
+    _id: 14,
+    title: "Product 14",
+    price: 15.95,
+    description: "Kit de cepillos y peines suaves para mantener el pelaje de tu gato sin nudos y brillante.",
+    category: "Cuidado del pelaje",
+    image: "https://www.google.com/url?sa=i&url=https%3A%2F%2Fverdecora.es%2Fblog%2Ftipos-cepillos-perros&psig=AOvVaw0dG8PTFhzSGPW0MHQLHRJo&ust=1700784149487000&source=images&cd=vfe&opi=89978449&ved=0CBEQjRxqFwoTCPiQ_-ro2IIDFQAAAAAdAAAAABAE"
+  },
+  {
+    _id: 15,
+    title: "Product 15",
+    price: 49.99,
+    description: "Acuario completo con sistema de filtrado integrado para peces tropicales.",
+    category: "Acuarios y peceras",
+    image: "https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.pngkey.com%2Fmaxpic%2Fu2r5u2e6a9a9a9o0%2F&psig=AOvVaw3Jzv9rmpt3yUwLo8xPm5_N&ust=1700784443555000&source=images&cd=vfe&opi=89978449&ved=0CBEQjRxqFwoTCOjB-_bp2IIDFQAAAAAdAAAAABAE"
+  },
+  {
+    _id: 16,
+    title: "Product 16",
+    price: 14.50,
+    description: "Bolsa de transporte con ventilación para hamsters, ratones u otros pequeños roedores.",
+    category: "Transporte para roedores",
+    image: "https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.manomano.es%2Fcasetas-para-roedores-4474&psig=AOvVaw31s0gcSx3-WbWBSo2FC61d&ust=1700784489964000&source=images&cd=vfe&opi=89978449&ved=0CBEQjRxqFwoTCNDihI3q2IIDFQAAAAAdAAAAABAI"
+  },
+  {
+    _id: 17,
+    title: "Product 17",
+    price: 3.99,
+    description: "Peluche relleno de catnip para entretener y estimular a tu gato.",
+    category: "Juguetes de catnip",
+    image: "https://www.google.com/url?sa=i&url=https%3A%2F%2Flaika.com.co%2Fproduct_details%2Fbog%2Findupet-minipeluche-de-animales-con-catnip%2Fcat&psig=AOvVaw1jSyfkk_iq8V2DBzec4O_e&ust=1700784565375000&source=images&cd=vfe&opi=89978449&ved=0CBEQjRxqFwoTCLjK9rDq2IIDFQAAAAAdAAAAABAE"
+  },
+  {
+    _id: 18,
+    title: "Product 18",
+    price: 79.95,
+    description: "Caseta resistente a la intemperie para que tu perro tenga su propio espacio al aire libre.",
+    category: "Casas y refugios para perros",
+    image: "https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.pinterest.com.mx%2Falejandrososa941%2Fcasa-para-perro-madera%2F&psig=AOvVaw3l8ewrEngg0IzZjELAHJk8&ust=1700784591580000&source=images&cd=vfe&opi=89978449&ved=0CBEQjRxqFwoTCMi8xL3q2IIDFQAAAAAdAAAAABAE"
+  },
+  {
+    _id: 19,
+    title: "Product 19",
+    price: 11.25,
+    description: "Pack de juguetes con sonido chirriante para mantener entretenidos a los cachorros.",
+    category: "Juguetes para cachorros",
+    image: "https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.sunsky-online.com%2Fes%2Fp%2FTBD052631501I%2FJuguete-chirriante-de-goma-para-perros-gritando-pollo-masticable-hueso-pelota-chirriante-juguetes-para-perros-molienda-de-dientes-entrega-de-color-aleatorio.htm&psig=AOvVaw2xy9iTc4JYVGaR4m-IVrSi&ust=1700784621391000&source=images&cd=vfe&opi=89978449&ved=0CBEQjRxqFwoTCNDk7cvq2IIDFQAAAAAdAAAAABAE"
+  },
+  {
+    _id: 20,
+    title: "Product 20",
+    price: 17.99,
+    description: "Sweater suave y cómodo para gatos ideal para días fríos.",
+    category: "Ropa para gatos",
+    image: "https://www.google.com/url?sa=i&url=https%3A%2F%2Far.pinterest.com%2Fclaudiabienesta%2Fabrigos-para-gatos%2F&psig=AOvVaw0y7Z1SJxXXCyAdw0IFf0kx&ust=1700784637871000&source=images&cd=vfe&opi=89978449&ved=0CBEQjRxqFwoTCMDDxtPq2IIDFQAAAAAdAAAAABAE"
+  }
+])
